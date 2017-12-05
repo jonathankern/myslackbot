@@ -37,24 +37,24 @@ module.exports = function(robot) {
    	robot.hear(/How many (.*) until the new year?/, function(res) {
    		let userInputVariant = res.match[1];
 
-   		seconds = Math.floor((newYearsDay - (today))/1000);
+        seconds = Math.floor((newYearsDay - (today))/1000);
         minutes = Math.floor(seconds/60);
         hours = Math.floor(minutes/60);
         days = Math.floor(hours/24);
 
-      	// return statements depending on user input
-      	if (userInputVariant === 'days') {
-      		return res.reply(days + " " + userInputVariant);
-      	} else if (userInputVariant === 'hours') {
-      		return res.reply(hours + " " + userInputVariant);
-      	} else if (userInputVariant === 'minutes') {
-      		return res.reply(minutes + " " + userInputVariant);
-      	} else if (userInputVariant === 'seconds') {
-      		return res.reply(seconds + " " + userInputVariant);
-      	} else if (userInputVariant !== 'days' || userInputVariant !== 'hours' || userInputVariant !== 'minutes' || userInputVariant !== 'seconds' ) {
-      		// giphy that doesn't make sense
-      		return res.send("That doesn't make sense! Try again.", "http://gph.is/1KoXeLm");
-      	}
+        // return statements depending on user input
+        if (userInputVariant === 'days') {
+        	return res.reply(days + " " + userInputVariant);
+        } else if (userInputVariant === 'hours') {
+        	return res.reply(hours + " " + userInputVariant);
+        } else if (userInputVariant === 'minutes') {
+        	return res.reply(minutes + " " + userInputVariant);
+        } else if (userInputVariant === 'seconds') {
+        	return res.reply(seconds + " " + userInputVariant);
+        } else if (userInputVariant !== 'days' || userInputVariant !== 'hours' || userInputVariant !== 'minutes' || userInputVariant !== 'seconds' ) {
+        	// giphy that doesn't make sense
+        	return res.send("That doesn't make sense! Try again.", "http://gph.is/1KoXeLm");
+        }
 
    	});
 };
