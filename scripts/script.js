@@ -2,16 +2,14 @@
 //
 //
 // Dependencies:
-//   npm install --save giphy-js-sdk-core
+//
 //
 // Configuration:
-//   HUBOT_GIPHY_API_KEY
+//
 //
 // Commands:
 //
 
-// var GphApiClient = require('giphy-js-sdk-core');
-// client = GphApiClient("xoxb-278133641456-OwIoMTmJvhHhqDktQh80FPG9");
 
 
 module.exports = function(robot) {
